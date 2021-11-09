@@ -1,0 +1,8 @@
+docker run -p 1234:8080 web-server
+
+
+Open browser to : http://localhost:1234/
+{
+"message": "You connected to the following path: /",
+"path": "/"
+}
