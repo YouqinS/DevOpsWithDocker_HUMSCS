@@ -1,0 +1,58 @@
+C:\Users\sun>docker images
+REPOSITORY                                                          TAG               IMAGE ID       CREATED        SIZE
+ubuntu                                                              latest            ba6acccedd29   3 weeks ago    72.8MB
+maven                                                               latest            9214a82a13de   3 weeks ago    772MB
+ruby                                                                latest            090e42145ec2   3 weeks ago    881MB
+nginx                                                               latest            87a94228f133   3 weeks ago    133MB
+registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper   x86_64-58ba2b95   5edd9c02b571   2 months ago   72MB
+
+C:\Users\sun>docker system prune -a
+WARNING! This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all images without at least one container associated to them
+  - all build cache
+
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+176a02de7b0f93148a07b70f02dfb5c18e9a59787165a674b6eadcf42e31e70b
+
+Deleted Images:
+untagged: registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-58ba2b95
+untagged: registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper@sha256:544433428cb5f6de3c20b7db445bad20a878fd0a259e13dc1df1f659225e2b25
+deleted: sha256:5edd9c02b571259bc296d0befdef12cc72bfe4fc85b8d14cdf277e251fde4297
+deleted: sha256:2471a23ac1bb880b22d93361c253b32a283423c97417a6f585432cb135f75e0c
+untagged: maven:latest
+untagged: maven@sha256:6ef014c142ea5c3582920ea254920c463d3578b57189e4048044fe3a6cb5fed2
+deleted: sha256:9214a82a13debdb1939261435643c398a39935dd1ebedff51f426c8f96769bdf
+deleted: sha256:5fc75a3a1d952b4364f2926d861f1c9b01fe9ab7bcc9d757d720c007b0178b70
+deleted: sha256:15d9eaf8df5e1cc82ffab103faec1bb533414cecb4274cf47c3b7f611390fb10
+deleted: sha256:1148cd1f1282e8eb531fccfbbe40eef3142cbfbf8311877aa59c3acafe5582f6
+deleted: sha256:90327be53b4b1cf312bd907d9790fb4bce83b6d0f8a60b94f4d6cdc1ee2b7aa1
+deleted: sha256:ab32c7db996c7ec489f83f6ea0b3bf35de2fabc310ea4931f6a81459c78341c2
+deleted: sha256:1e7830801ec7944e3dc2e9c7bfe5a65c213782e76fb81ab4b9391c713627fc1a
+deleted: sha256:54b5e2b53cf2ad50dd4869a7e7814bf62eb5484735bc39aa7aea08af3bfc9c89
+untagged: ruby:latest
+untagged: ruby@sha256:179ae4287b6bb0b9f03d09cd1f10c2aba7e34c60183c838b2ea00bcdd85c43d7
+deleted: sha256:090e42145ec2ad82c589b5b06159752e60c6b9c63942dc79885225b511c8dc2d
+deleted: sha256:76cbccbe062ae26471185ee91c4d1663db7d87e2fb611e8af9d06bb6dd1fc4fc
+deleted: sha256:636bb1a079ae18c53807112d92bfcd8458747e1b31ad089c5ec4497131a48acb
+deleted: sha256:96a789f03bc47d1282616e9b2d33ace90e902fdacdcc296273e07abf18d60144
+deleted: sha256:e67b6800e9e8882c7060611038966ea29afe619bce27d0ea01528979a0f5c0fd
+deleted: sha256:995950c940fdede4906e13ddb5a13691b727b942a9b67afc23cc0172d80897a8
+deleted: sha256:b7a4a299f0c4a0e9d6f4156cd61b3a00c0595d9ee3db2dd7888f3a855b541fd6
+deleted: sha256:a9e0e6b8fdcd469c8785099c4559093696ad2c7da957d355557a17ed1bb8d23f
+deleted: sha256:62a747bf1719d2d37fff5670ed40de6900a95743172de1b4434cb019b56f30b4
+
+Total reclaimed space: 1.725GB
+
+
+C:\Users\sun>docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED       STATUS       PORTS     NAMES
+066042bc999b   nginx     "/docker-entrypoint.…"   6 hours ago   Up 6 hours   80/tcp    charming_tharp
+
+
+
+C:\Users\sun>docker images
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+nginx        latest    87a94228f133   3 weeks ago   133MB

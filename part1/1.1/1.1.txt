@@ -1,0 +1,25 @@
+C:\Users\sun>docker container run -d nginx
+551f0d6b6772cdacad6cb1912e0cb6ec8e8ad4f5b0049c65d5d092a9c5ed2f5e
+
+C:\Users\sun>docker container run -d nginx
+d9b9fb3ae59780a598caaf20936ebd252bfee7bb9979c0266b10a207af8d07c6
+
+C:\Users\sun>docker container ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES
+d9b9fb3ae597   nginx     "/docker-entrypoint.…"   21 seconds ago   Up 20 seconds   80/tcp    nostalgic_varahamihira
+551f0d6b6772   nginx     "/docker-entrypoint.…"   25 seconds ago   Up 23 seconds   80/tcp    vibrant_borg
+066042bc999b   nginx     "/docker-entrypoint.…"   15 minutes ago   Up 15 minutes   80/tcp    charming_tharp
+
+C:\Users\sun>docker container stop d9b
+d9b
+
+C:\Users\sun>docker container stop 551
+551
+
+
+C:\Users\sun>docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS                      PORTS     NAMES
+d9b9fb3ae597   nginx     "/docker-entrypoint.…"   About a minute ago   Exited (0) 30 seconds ago             nostalgic_varahamihira
+551f0d6b6772   nginx     "/docker-entrypoint.…"   About a minute ago   Exited (0) 20 seconds ago             vibrant_borg
+066042bc999b   nginx     "/docker-entrypoint.…"   16 minutes ago       Up 16 minutes               80/tcp    charming_tharp
+
