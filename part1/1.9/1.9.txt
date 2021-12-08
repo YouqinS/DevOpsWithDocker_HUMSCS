@@ -1,4 +1,0 @@
-docker run -d --rm -it --name ex_1_9 -v "C:/Users/sun/Downloads/_CSM_HU/2021.11-12/DevOpsWithDocker/DevOpsWithDocker_HUMSCS/part1/1.9/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service:ubuntu
-
-
-
