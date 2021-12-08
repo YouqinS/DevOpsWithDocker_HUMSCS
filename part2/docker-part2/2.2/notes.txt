@@ -1,4 +1,0 @@
-sudo docker-compose up
-
-
-curl localhost:8080 

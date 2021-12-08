@@ -1,9 +1,0 @@
-version: '3' 
-
-services: 
-    youtube-dl-ubuntu:  
-      image: lnsth/youtubedl
-      build: .
-      volumes: 
-        - .:/mydir
-      container_name: youtube-dl
