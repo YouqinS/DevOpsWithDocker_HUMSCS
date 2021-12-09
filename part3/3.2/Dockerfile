@@ -26,4 +26,5 @@ RUN chmod +x buildAndPush.sh
 
 
 VOLUME ["/var/run/docker.sock"]
+ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 CMD ["./buildAndPush.sh"]
