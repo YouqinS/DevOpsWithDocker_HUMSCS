@@ -1,7 +1,5 @@
 FROM ubuntu
 
-WORKDIR /usr/src/app
-
 # Install git
 RUN apt-get update
 RUN apt-get install -y git
@@ -19,12 +17,8 @@ RUN apt-get update
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get install docker-ce docker-ce-cli containerd.io --yes
 
-# Copy files into container
 COPY . .
-
 RUN chmod +x buildAndPush.sh
 
-
-VOLUME ["/var/run/docker.sock"]
 ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
-CMD ["./buildAndPush.sh"]
+ENTRYPOINT ["./buildAndPush.sh"]
