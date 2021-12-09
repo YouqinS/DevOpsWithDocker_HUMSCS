@@ -1,0 +1,17 @@
+
+version: "3"
+services:
+  pingpong:
+    image: lnsth/pingpong:docker_exercise_3.02 
+    ports:
+      - 8080:8080
+    container_name: pingpong
+
+  watchtower:
+    image: containrrr/watchtower
+    environment:
+      - WATCHTOWER_POLL_INTERVAL=60
+      - WATCHTOWER_MONITOR_ONLY=true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    container_name: watchtower
