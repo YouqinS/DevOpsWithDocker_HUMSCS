@@ -28,6 +28,7 @@ services:
         POSTGRES_USER: postgres
         POSTGRES_DATABASE: postgres
         POSTGRES_HOST: postgres
+        REQUEST_ORIGIN: http://localhost #enable proxy of other api-endpoints
       depends_on: 
         - postgres
 
@@ -41,7 +42,9 @@ services:
         - ./nginx.conf:/etc/nginx/nginx.conf
       ports:
         - 80:80
-      depends_on:
+      depends_on: 
         - backend
+        - frontend
+
 volumes:
   database:
