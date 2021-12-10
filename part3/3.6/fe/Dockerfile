@@ -18,8 +18,6 @@ RUN apk add --update nodejs npm && npm install -g serve && adduser -S appuser
 
 COPY --from=build-stage ./usr/src/app/build ./usr/src/app/build
 
-#RUN npm install && npm run build && npm install -g serve && adduser -S appuser 
-
 USER appuser
 
 CMD ["serve", "-s", "-l", "5000", "build"]
